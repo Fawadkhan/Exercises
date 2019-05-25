@@ -1,26 +1,17 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import { profiles, users, movies } from "./data.js";
+import "./App.css";
+import FavoriteMovies from "./FavouriteMovies.js";
+import popularMovies from "./PopularMovies.js";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  render() {
+    return (
+      <div>
+        <FavoriteMovies profiles={profiles} users={users} movies={movies} />
+      </div>
+    );
+  }
 }
 
 export default App;
